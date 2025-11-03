@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meshwa Patel | Portfolio</title>
+  <meta name="description" content="Meshwa Patel – Data & Marketing Analytics Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b0f16;           /* deep navy */
+      --panel: #121826;        /* card bg */
+      --text: #e8edf7;         /* primary text */
+      --muted: #9fb0c9;        /* secondary text */
+      --brand: #7c9cff;        /* accent */
+      --brand-2:#22d3ee;       /* cyan accent */
+      --ring: rgba(124,156,255,.35);
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(124,156,255,.08), transparent 60%),
+                  radial-gradient(900px 600px at -10% 20%, rgba(34,211,238,.08), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    /* Navbar */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(11,15,22,.6);backdrop-filter: blur(8px);border-bottom:1px solid rgba(124,156,255,.12)}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:800;letter-spacing:.5px}
+    .brand span{color:var(--brand)}
+    .nav-links{display:flex;gap:18px}
+    .nav-links a{padding:8px 12px;border-radius:12px;color:var(--muted)}
+    .nav-links a:hover{background:rgba(124,156,255,.1);color:var(--text)}
+    /* Hero */
+    .hero{padding:82px 0 36px}
+    .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(124,156,255,.1);color:var(--brand);border:1px solid rgba(124,156,255,.25);padding:6px 10px;border-radius:999px;font-size:12px}
+    h1{font-size:42px;line-height:1.1;margin:16px 0 10px}
+    .lead{color:var(--muted);font-size:18px}
+    .cta{display:flex;gap:12px;margin-top:22px}
+    .btn{padding:12px 16px;border-radius:14px;border:1px solid rgba(124,156,255,.25);background:linear-gradient(180deg, rgba(124,156,255,.18), rgba(124,156,255,.08));color:var(--text);box-shadow:var(--shadow)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.secondary{background:transparent}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      border:1px solid rgba(124,156,255,.14);border-radius:var(--radius);box-shadow:var(--shadow)
+    }
+    .hero-card{padding:18px}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:#0e1524;border:1px solid rgba(124,156,255,.2);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:12px}
+    .grid{display:grid;gap:18px}
+    .skills{grid-template-columns:repeat(2,1fr)}
+    .tag{display:inline-block;background:rgba(34,211,238,.12);color:#b7ecf6;border:1px solid rgba(34,211,238,.25);padding:6px 10px;border-radius:999px;font-size:12px;margin:6px 6px 0 0}
+    section{padding:36px 0}
+    h2{font-size:28px;margin:0 0 16px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{padding:18px}
+    .project h3{margin:6px 0 6px;font-size:18px}
+    .muted{color:var(--muted)}
+    .list{display:flex;flex-wrap:wrap;gap:8px}
+    .list .chip{padding:6px 10px;border-radius:999px;border:1px solid rgba(124,156,255,.2);color:var(--muted);font-size:12px}
+    .timeline{display:grid;gap:14px}
+    .item{padding:16px}
+    .item strong{display:block;margin-bottom:6px}
+    /* Footer */
+    footer{padding:32px 0;color:var(--muted);border-top:1px solid rgba(124,156,255,.12)}
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .nav-links{display:none}
+      h1{font-size:34px}
+      .cards{grid-template-columns:1fr}
+      .skills{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-wrap">
+      <div class="brand">MESHW<span>A</span> • Analytics</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <div class="hero-grid">
+      <div>
+        <span class="badge">📊 Data & Marketing Analytics • SQL • Python • Power BI • Tableau</span>
+        <h1>Hi, I'm <span style="color:var(--brand)">Meshwa Patel</span> — I turn data into clear, confident decisions.</h1>
+        <p class="lead">M.S. in Business & Data Analytics @ UC (4.0 GPA). I build dashboards, run experiments, and model outcomes that help teams act faster and smarter.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-card card">
+        <div class="pill">🎯 Currently open to: Data/Marketing Analytics Internship (Summer/Fall)</div>
+        <div style="margin-top:12px" class="grid skills">
+          <div class="card" style="padding:12px">
+            <strong>Recent Wins</strong>
+            <ul class="muted">
+              <li>Built KPI dashboard to track campaign ROI</li>
+              <li>Modeled enrollment & outreach trends</li>
+              <li>Automated weekly reporting (SQL + Excel)</li>
+            </ul>
+          </div>
+          <div class="card" style="padding:12px">
+            <strong>Focus Areas</strong>
+            <div class="list" style="margin-top:8px">
+              <span class="chip">A/B Testing (basic)</span>
+              <span class="chip">Marketing Performance</span>
+              <span class="chip">Predictive Modeling</span>
+              <span class="chip">ROI Interpretation</span>
+              <span class="chip">Budget Tracking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="container">
+    <h2>About</h2>
+    <div class="card" style="padding:18px">
+      <p class="muted">I'm a data analyst who enjoys turning messy data into clear stories. I work across the stack: SQL for querying, Python/R for analysis, and Power BI/Tableau for interactive visuals. I’m currently completing the Google Data Analytics Professional Certificate and love building products that make decisions easier for teams.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="cards">
+      <article class="project card">
+        <span class="pill">Python • SQL • Tableau</span>
+        <h3>Marketing Campaign Optimization</h3>
+        <p class="muted">Analyzed a simulated dataset to compare channels, practice A/B test concepts, and visualize ROI trends in Tableau; produced budget guidance.</p>
+        <div>
+          <span class="tag">A/B Testing</span><span class="tag">Attribution (basic)</span><span class="tag">ROI</span>
+        </div>
+      </article>
+      <article class="project card">
+        <span class="pill">R • K-Means</span>
+        <h3>Customer Segmentation</h3>
+        <p class="muted">Clustered users into high-value segments and mapped engagement patterns to inform targeting and creative.</p>
+        <div>
+          <span class="tag">Clustering</span><span class="tag">Cohorts</span><span class="tag">Persona</span>
+        </div>
+      </article>
+      <article class="project card">
+        <span class="pill">Python • Sklearn</span>
+        <h3>Credit Card Fraud Detection</h3>
+        <p class="muted">Built classification baseline on imbalanced data; compared Random Forest vs. Logistic Regression; tracked ROC-AUC, precision, recall.</p>
+        <div>
+          <span class="tag">Imbalanced</span><span class="tag">Pipelines</span><span class="tag">Metrics</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <div class="card" style="padding:18px">
+      <div class="list">
+        <span class="chip">SQL</span>
+        <span class="chip">Python</span>
+        <span class="chip">R</span>
+        <span class="chip">Power BI</span>
+        <span class="chip">Tableau</span>
+        <span class="chip">A/B Testing (basic)</span>
+        <span class="chip">Predictive Modeling</span>
+        <span class="chip">Marketing Performance</span>
+        <span class="chip">ROI Interpretation</span>
+        <span class="chip">Excel</span>
+        <span class="chip">GA4 (familiar)</span>
+        <span class="chip">AppsFlyer (familiar)</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="container">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="item card">
+        <strong>TRM Enterprise — Data Analytics & Business Ops Intern</strong>
+        <span class="muted">Apr 2025 – Present • Charleston, WV</span>
+        <p class="muted">Built KPI dashboards, ran basic A/B comparisons, and partnered with finance/marketing on budget tracking and insights.</p>
+      </div>
+      <div class="item card">
+        <strong>University of Charleston — Academic Data Analytics Assistant</strong>
+        <span class="muted">Aug 2024 – Mar 2025 • Charleston, WV</span>
+        <p class="muted">Modeled outreach and enrollment trends; automated reporting; shipped real-time visualizations for leadership.</p>
+      </div>
+      <div class="item card">
+        <strong>Ajay Vansjalia & Associates — Auditing Assistant</strong>
+        <span class="muted">Jan 2023 – Jun 2024 • Ahmedabad, India</span>
+        <p class="muted">Analyzed financial data, improved controls, and supported audit accuracy & compliance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <div class="card" style="padding:18px">
+      <p class="muted">Open to internships and analyst roles. Reach me at <a href="mailto:meshwapatel2508@gmail.com">meshwapatel2508@gmail.com</a> • <a href="tel:+13047413920">(304) 741‑3920</a> • <a href="https://www.linkedin.com/in/meshwa-patel-2b24a8385/" target="_blank" rel="noreferrer">LinkedIn</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="y"></span> Meshwa Patel. Built with 💙 and deployed on GitHub Pages.</small>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
